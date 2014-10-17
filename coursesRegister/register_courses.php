@@ -10,14 +10,14 @@
 <body>
         <?php
 		session_start();
-		$conn = mysqli_connect('sql100.byethost7.com', 'b7_13744102', '123123') or die("Can't connect DB"); //kết nối database
+		/*$conn = mysqli_connect('localhost', 'root', '') or die("Can't connect DB"); //kết nối database
+        mysqli_select_db($conn, 'school_manager');
+        mysqli_query($conn, 'set names utf8');*/
+        $conn = mysqli_connect('sql100.byethost7.com', 'b7_13744102', '123123') or die("Can't connect DB"); //kết nối database
         mysqli_select_db($conn, 'b7_13744102_92512');
         mysqli_query($conn, 'set names utf8');
         ?><div id="wraper">
-	<form action="logout.php" method="post" >
-        <div align="center" style="font-size:30px;margin-top:20px; border: 2px solid black; border-radius: 20px; border-bottom:none;">
-            <b>THÔNG TIN SINH VIÊN</b>
-        </div>
+	
         <?php
 		if(!isset($_SESSION['username'])) //kiểm tra đăng nhập
 			header('Location: ../userManager/login.php'); //quay lại trang login
@@ -67,12 +67,10 @@
 			echo '<td>'.$khoa.'</td> </tr>'; 
 		?>
 		</table>
-			<div align="right">
-                <input type="submit" value="Logout" name="logout" style="font-size:15px; margin-top:2px; margin-bottom:2px;font-weight:bold;color:red;"/>
-            </div>
-		</form>
+			
+             
 		<form action="#" method="post" >
-            <div align="center" style="margin-top: 10px; font-size:30px; border: 2px solid black; border-radius: 20px; border-bottom:none;">
+            <div align="center" style="margin-top: 10px; font-size:30px; ">
                 <b>MÔN HỌC ĐÃ ĐĂNG KÝ</b>
             </div>
             <table style="width:100%; margin-top:5px;" >
@@ -116,7 +114,7 @@
                 }
                 ?>
             </table>
-            <div align="center" style="margin-top: 50px; font-size:30px; border: 2px solid black; border-radius: 20px; border-bottom:none;">
+            <div align="center" style="margin-top: 50px; font-size:30px;">
                 <b>ĐĂNG KÝ MÔN HỌC</b>
             </div>
             <table style="width:100%; margin-top:5px;">
@@ -153,11 +151,11 @@
 			}
 			?>
             </table>
-            <div align="right">
+                    <div align="center">
                 <input type="submit" value="Accept" name="accept" style="font-size:15px;margin-top:2px;margin-bottom:2px;font-weight:bold;color:blue;"/>
 			</div>
-            <div align="right">
-				<input type="submit" value="Cancel" name="cancel" style="font-size:15px;margin-top:2px;margin-bottom:2px;font-weight:bold;color:red;"/>
+            <div align="center">
+				<input type="submit" value="Cancel" name="cancel" style=""/>
             </div>
 			<?php
 			if (isset($_POST['accept']) && isset($username)) {//kiểm tra nút submit 'accept' của form
@@ -194,7 +192,12 @@
 				//}
 			}
 			?>
-		</form></div>		
+		</form></div>	
+    <div align="center">
+                <form action="logout.php" method="post" >
+                <input type="submit" value="Logout" name="logout" style=""/>
+    </div>       
+		</form>
 </body>
 </html>
 <?php
