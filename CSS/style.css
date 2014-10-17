@@ -54,12 +54,6 @@ table  th	{
     color: white;
 }
 #header {
-    height:200px;
-    background-color: #1F6AF6;
-    background-image: url('../images/header.jpg');
-    color: #000000;
-    text-align:left;
-    /* padding: 5px */
 
 }
 /* #nav{
@@ -75,10 +69,57 @@ background-color: #FFFFFF;
 }
 
 #footer  {
-    height: 65px;
-    padding: 10px 0px 5px 0px; 
-    background-color: #1F6AF6;
-    color:#FFFFFF;
-    text-align:center
+   
+}
+.loginTable{
+    width: 300px;
+    border-style: solid;
+    border-width: 1px;
+    margin: 200px auto ;
+    padding: 30px;
+}
 
+
+.login-control-group {
+    margin-bottom:9px;
+
+}
+.login-control-label {
+    display:block;
+    float:left;
+    width:100px;
+    text-align:left;
+}
+.login-control {
+   
+    padding-left:20px;
+    margin-left:180px;
+    margin-left:0
+}
+.login-control-bn{
+    margin: 0px auto;
+    width: 46px;
+}
+
+.nhaplieu-control-group {
+    margin-bottom:9px;
+
+}
+.nhaplieu-control-label {
+    display:block;
+    float:left;
+    width:130px;
+    text-align:left;
+}
+.nhaplieu-control {
+   
+    padding-left:20px;
+    margin-left:180px;
+    margin-left:0
+}
+.nhaplieu-tbLeft{float:left;
+width: 50%;}
+.nhaplieu-tbRight{float: right;width: 50%;}
+#nhaplieu{
+    margin: 9px auto;
 }
