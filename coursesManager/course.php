@@ -123,7 +123,7 @@ include_once '../header.php';
 
                 else {
 
-                    $sql_addc = mysqli_query($conn, "INSERT INTO courses_info (mamh, tenmh, sotinchi, batbuoc) VALUES ('$mamh', '$tenmh', '$sotinchi', '$batbuoc'");
+                    $sql_addc = mysqli_query($conn, "INSERT INTO courses_info (mamh, tenmh, sotinchi, batbuoc, soluong) VALUES ('$mamh', '$tenmh', '$sotinchi', '$batbuoc',0)");
 
                     header('Location: course.php');
                 }
